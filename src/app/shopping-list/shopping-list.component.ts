@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredient } from '../shared';
+
+import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
-  selector: 'rb-shopping-list',
+  selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styles: []
+  styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
-  items: Ingredient[] = [];
+  ingredients: Ingredient[] = [
+    new Ingredient('Apples', 5),
+    new Ingredient('Tomatoes', 10),
+  ];
 
   constructor() { }
 
